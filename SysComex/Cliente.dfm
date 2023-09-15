@@ -1,0 +1,470 @@
+object frmClientes: TfrmClientes
+  Left = 192
+  Top = 117
+  Width = 480
+  Height = 556
+  Caption = 'Cadastro de Clientes'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 464
+    Height = 41
+    Align = alTop
+    BevelInner = bvLowered
+    TabOrder = 0
+    object DBNavigator1: TDBNavigator
+      Left = 64
+      Top = 8
+      Width = 240
+      Height = 25
+      DataSource = dsCliente
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 41
+    Width = 464
+    Height = 41
+    Align = alTop
+    BevelInner = bvLowered
+    TabOrder = 1
+    object Label9: TLabel
+      Left = 58
+      Top = 14
+      Width = 39
+      Height = 13
+      Caption = 'C'#243'digo: '
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 224
+      Top = 9
+      Width = 23
+      Height = 22
+      Glyph.Data = {
+        06010000424D0601000000000000420000002800000007000000070000000100
+        200003000000C4000000130B0000130B000000000000000000000000FF0000FF
+        0000FF000000000000F500000066000000000000000000000000000000000000
+        000000000066000000FF0000007A0000008F0000009900000051000000000000
+        00000000007A000000C200000033000000150000009900000075000000000000
+        008F00000033000000000000000000000000000000CC00000000000000990000
+        0052000000290000000000000000000000C80000000000000051000000A30000
+        008E0000009900000052000000A3000000000000000000000075000000CC0000
+        00C8000000A30000000A}
+      OnClick = SpeedButton1Click
+    end
+    object txtCliente: TEdit
+      Left = 100
+      Top = 11
+      Width = 121
+      Height = 21
+      TabOrder = 0
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 476
+    Width = 464
+    Height = 41
+    Align = alBottom
+    BevelInner = bvLowered
+    TabOrder = 2
+    object BitBtn1: TBitBtn
+      Left = 184
+      Top = 8
+      Width = 90
+      Height = 25
+      Caption = '&Fechar'
+      TabOrder = 0
+      Kind = bkClose
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Top = 299
+    Width = 464
+    Height = 177
+    Align = alBottom
+    BevelInner = bvLowered
+    TabOrder = 3
+    object DBGrid1: TDBGrid
+      Left = 2
+      Top = 2
+      Width = 460
+      Height = 173
+      Align = alClient
+      DataSource = dsPesqCliente
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'IDCLIENTE'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NOMECLIENTE'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SEXO'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TIPODOC'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NUMDOC'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TELEFONE'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'EMAIL'
+          Visible = True
+        end>
+    end
+  end
+  object Panel5: TPanel
+    Left = 0
+    Top = 82
+    Width = 464
+    Height = 217
+    Align = alClient
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 4
+    object Label1: TLabel
+      Left = 58
+      Top = 9
+      Width = 39
+      Height = 13
+      Caption = 'C'#243'digo: '
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 64
+      Top = 32
+      Width = 34
+      Height = 13
+      Caption = 'Nome: '
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 67
+      Top = 54
+      Width = 30
+      Height = 13
+      Caption = 'Sexo: '
+    end
+    object Label4: TLabel
+      Left = 13
+      Top = 77
+      Width = 85
+      Height = 13
+      Caption = 'Tipo Documento: '
+    end
+    object Label5: TLabel
+      Left = 8
+      Top = 100
+      Width = 89
+      Height = 13
+      Caption = 'Num. Documento: '
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 45
+      Top = 123
+      Width = 52
+      Height = 13
+      Caption = 'Endere'#231'o: '
+      FocusControl = DBEdit6
+    end
+    object Label7: TLabel
+      Left = 47
+      Top = 148
+      Width = 48
+      Height = 13
+      Caption = 'Telefone: '
+      FocusControl = DBEdit7
+    end
+    object Label8: TLabel
+      Left = 136
+      Top = 288
+      Width = 34
+      Height = 13
+      Caption = 'E-mail: '
+      FocusControl = DBEdit8
+    end
+    object Label10: TLabel
+      Left = 61
+      Top = 173
+      Width = 34
+      Height = 13
+      Caption = 'E-mail: '
+      FocusControl = DBEdit3
+    end
+    object DBEdit1: TDBEdit
+      Left = 100
+      Top = 6
+      Width = 75
+      Height = 21
+      DataField = 'IDCLIENTE'
+      DataSource = dsCliente
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 100
+      Top = 29
+      Width = 200
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'NOMECLIENTE'
+      DataSource = dsCliente
+      TabOrder = 1
+    end
+    object DBEdit5: TDBEdit
+      Left = 100
+      Top = 98
+      Width = 100
+      Height = 21
+      DataField = 'NUMDOC'
+      DataSource = dsCliente
+      TabOrder = 2
+    end
+    object DBEdit6: TDBEdit
+      Left = 100
+      Top = 121
+      Width = 200
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'ENDERECO'
+      DataSource = dsCliente
+      TabOrder = 3
+    end
+    object DBEdit7: TDBEdit
+      Left = 100
+      Top = 145
+      Width = 150
+      Height = 21
+      DataField = 'TELEFONE'
+      DataSource = dsCliente
+      TabOrder = 4
+    end
+    object DBEdit8: TDBEdit
+      Left = 136
+      Top = 304
+      Width = 654
+      Height = 21
+      DataField = 'EMAIL'
+      DataSource = dsCliente
+      TabOrder = 5
+    end
+    object DBComboBox1: TDBComboBox
+      Left = 101
+      Top = 52
+      Width = 48
+      Height = 21
+      CharCase = ecUpperCase
+      DataField = 'SEXO'
+      DataSource = dsCliente
+      ItemHeight = 13
+      Items.Strings = (
+        'F'
+        'M')
+      TabOrder = 6
+    end
+    object DBComboBox2: TDBComboBox
+      Left = 100
+      Top = 75
+      Width = 145
+      Height = 21
+      DataField = 'TIPODOC'
+      DataSource = dsCliente
+      ItemHeight = 13
+      Items.Strings = (
+        'RG'
+        'CPF'
+        'T'#205'TULO ESTRANGEIRO')
+      TabOrder = 7
+    end
+    object DBEdit3: TDBEdit
+      Left = 99
+      Top = 169
+      Width = 150
+      Height = 21
+      CharCase = ecLowerCase
+      DataField = 'EMAIL'
+      DataSource = dsCliente
+      TabOrder = 8
+    end
+  end
+  object tblCliente: TIBTable
+    Database = frmMenuPrin.dbComercio
+    Transaction = frmMenuPrin.Trans
+    BeforePost = tblClienteBeforePost
+    OnNewRecord = tblClienteNewRecord
+    BufferChunks = 1000
+    CachedUpdates = False
+    IndexFieldNames = 'IDCLIENTE'
+    TableName = 'CLIENTE'
+    Left = 313
+    Top = 7
+    object tblClienteIDCLIENTE: TIntegerField
+      DisplayLabel = 'C'#243'digo: '
+      FieldName = 'IDCLIENTE'
+    end
+    object tblClienteNOMECLIENTE: TIBStringField
+      DisplayLabel = 'Nome: '
+      FieldName = 'NOMECLIENTE'
+      Size = 50
+    end
+    object tblClienteSEXO: TIBStringField
+      DisplayLabel = 'Sexo: '
+      FieldName = 'SEXO'
+      Size = 1
+    end
+    object tblClienteTIPODOC: TIBStringField
+      DisplayLabel = 'Tipo Documento: '
+      FieldName = 'TIPODOC'
+      Size = 50
+    end
+    object tblClienteNUMDOC: TIBStringField
+      DisplayLabel = 'Num. Documento: '
+      FieldName = 'NUMDOC'
+      Size = 50
+    end
+    object tblClienteENDERECO: TIBStringField
+      DisplayLabel = 'Endere'#231'o: '
+      FieldName = 'ENDERECO'
+      Size = 100
+    end
+    object tblClienteTELEFONE: TIBStringField
+      DisplayLabel = 'Telefone: '
+      FieldName = 'TELEFONE'
+      EditMask = '!\(999\)000-0000;1;_'
+      Size = 50
+    end
+    object tblClienteEMAIL: TIBStringField
+      DisplayLabel = 'E-mail: '
+      FieldName = 'EMAIL'
+      Size = 50
+    end
+  end
+  object dsCliente: TDataSource
+    DataSet = tblCliente
+    Left = 343
+    Top = 7
+  end
+  object qryContador: TIBQuery
+    Database = frmMenuPrin.dbComercio
+    Transaction = frmMenuPrin.Trans
+    BufferChunks = 1000
+    CachedUpdates = False
+    DataSource = dsCliente
+    SQL.Strings = (
+      'SELECT MAX(IDCLIENTE) FROM CLIENTE')
+    Left = 320
+    Top = 90
+  end
+  object qryPesqCliente: TIBQuery
+    Database = frmMenuPrin.dbComercio
+    Transaction = frmMenuPrin.Trans
+    BufferChunks = 1000
+    CachedUpdates = False
+    SQL.Strings = (
+      'SELECT * FROM CLIENTE WHERE IDCLIENTE = :ID')
+    Left = 256
+    Top = 47
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    object qryPesqClienteIDCLIENTE: TIntegerField
+      DisplayLabel = 'C'#243'digo: '
+      FieldName = 'IDCLIENTE'
+      Origin = 'CLIENTE.IDCLIENTE'
+      Required = True
+    end
+    object qryPesqClienteNOMECLIENTE: TIBStringField
+      DisplayLabel = 'Nome: '
+      FieldName = 'NOMECLIENTE'
+      Origin = 'CLIENTE.NOMECLIENTE'
+      Required = True
+      Size = 50
+    end
+    object qryPesqClienteSEXO: TIBStringField
+      DisplayLabel = 'Sexo: '
+      FieldName = 'SEXO'
+      Origin = 'CLIENTE.SEXO'
+      FixedChar = True
+      Size = 1
+    end
+    object qryPesqClienteTIPODOC: TIBStringField
+      DisplayLabel = 'Tipo Doc.'
+      FieldName = 'TIPODOC'
+      Origin = 'CLIENTE.TIPODOC'
+      Required = True
+      Size = 50
+    end
+    object qryPesqClienteNUMDOC: TIBStringField
+      DisplayLabel = 'Num. Doc.'
+      FieldName = 'NUMDOC'
+      Origin = 'CLIENTE.NUMDOC'
+      Required = True
+      Size = 50
+    end
+    object qryPesqClienteENDERECO: TIBStringField
+      DisplayLabel = 'Endere'#231'o: '
+      FieldName = 'ENDERECO'
+      Origin = 'CLIENTE.ENDERECO'
+      Required = True
+      Size = 100
+    end
+    object qryPesqClienteTELEFONE: TIBStringField
+      DisplayLabel = 'Telefone: '
+      FieldName = 'TELEFONE'
+      Origin = 'CLIENTE.TELEFONE'
+      Required = True
+      Size = 50
+    end
+    object qryPesqClienteEMAIL: TIBStringField
+      DisplayLabel = 'E-mail: '
+      FieldName = 'EMAIL'
+      Origin = 'CLIENTE.EMAIL'
+      Size = 50
+    end
+  end
+  object dsPesqCliente: TDataSource
+    DataSet = qryPesqCliente
+    Left = 286
+    Top = 47
+  end
+end

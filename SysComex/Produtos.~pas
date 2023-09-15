@@ -1,0 +1,55 @@
+unit Produtos;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, DB, IBCustomDataSet, IBTable, DBCtrls, StdCtrls, Mask,
+  Grids, DBGrids, Buttons;
+
+type
+  TfrmProdutos = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    tblProdutos: TIBTable;
+    dsProdutos: TDataSource;
+    tblProdutosIDPRODUTO: TIntegerField;
+    tblProdutosNOMEPRODUTO: TIBStringField;
+    tblProdutosIMGPRODUTO: TBlobField;
+    tblProdutosIDCATEGORIA: TIntegerField;
+    tblProdutosIDAPRESENTACAO: TIntegerField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBImage1: TDBImage;
+    Label4: TLabel;
+    DBEdit3: TDBEdit;
+    Label5: TLabel;
+    DBEdit4: TDBEdit;
+    DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
+    Label6: TLabel;
+    txtCodProd: TEdit;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmProdutos: TfrmProdutos;
+
+implementation
+
+uses MenuPrin;
+
+{$R *.dfm}
+
+end.
